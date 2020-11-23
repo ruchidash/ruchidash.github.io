@@ -80,7 +80,7 @@ SN_CSM_EC.init({
 	tokenCallBack: getTokenCallBack 
 });
 function getTokenCallBack(){
-			let idToken; let params = window.location.hash.substring(1).split(“&”); idToken = params[0].split(“=”)[1];
+			let idToken; let params = window.location.hash.substring(1).split("&"); idToken = params[0].split("=")[1];
 			return Promise.resolve(idToken);
 }
 
