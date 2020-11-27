@@ -76,8 +76,13 @@
 		<script src="https://bolt4.service-now.com/scripts/sn_csm_ec.js"></script>
 <script>
 SN_CSM_EC.init({
-	moduleID: "https://bolt4.service-now.com/#f50c6528dbb0a010f88b9007db961971"
+	moduleID: "https://bolt4.service-now.com/#f50c6528dbb0a010f88b9007db961971",
+	tokenCallBack: getTokenCallBack 
 });
+function getTokenCallBack(){
+			let idToken; let params = window.location.hash.substring(1).split("&"); idToken = params[0].split("=")[1];
+			return Promise.resolve(idToken);
+}
 
 /* Call SN_CSM_EC.onLogin() function to start the user session in the Engagement Center automatically when the user logs in to the main portal */
 /* Call SN_CSM_EC.onLogout() function to terminate the user session in the Engagement Center automatically when the user logs out from the main portal */
