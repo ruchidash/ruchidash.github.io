@@ -25,7 +25,7 @@
 	</script> 	
 	<body>
 		<h1>Welcome to TPP (Token based)</h1>
-		 <a id="login" href="https://dev-5546716.okta.com/oauth2/v1/authorize?client_id=0oa1cz5tly6Oa1Hqm5d6&redirect_uri=https://ruchidash.github.io&state=1&scope=openid offline_access email&response_type=code id_token&response_mode=fragment&nonce=3ud9rzze0gf"class="goclick">Login with Okta</a> 
+		 <a id="login" href="https://dev-5546716.okta.com/oauth2/v1/authorize?client_id=0oa1dx4tgKMWugyDh5d6&redirect_uri=https://ruchidash.github.io&state=1&scope=openid offline_access email&response_type=code id_token&response_mode=fragment&nonce=3ud9rzze0gf"class="goclick">Login with Okta</a> 
 		
 		
 		
@@ -73,16 +73,11 @@
 			usr.style.display = "none";					
 		}
 		</script>
-		<script src="https://niltest1.service-now.com/scripts/sn_csm_ec.js"></script>
+		<script src="https://bolt4.service-now.com/scripts/sn_csm_ec.js"></script>
 <script>
 SN_CSM_EC.init({
-	moduleID: "https://niltest1.service-now.com/#fe54256cdb30a010494c52b8dc9619fe",
-	tokenCallBack: getTokenCallBack 
+	moduleID: "https://bolt4.service-now.com/#036a25e4dbb0a010f88b9007db9619c2"
 });
-function getTokenCallBack(){
-			let idToken; let params = window.location.hash.substring(1).split("&"); idToken = params[0].split("=")[1];
-			return Promise.resolve(idToken);
-}
 
 /* Call SN_CSM_EC.onLogin() function to start the user session in the Engagement Center automatically when the user logs in to the main portal */
 /* Call SN_CSM_EC.onLogout() function to terminate the user session in the Engagement Center automatically when the user logs out from the main portal */
